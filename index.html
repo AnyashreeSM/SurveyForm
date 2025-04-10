@@ -1,42 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Student Experience Survey/title>
-   <link rel="stylesheet" href="styles.css">
-    </head>
-  <body id="body">
-    <link rel="stylesheet" href="styles.css">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Experience Survey</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="body">
+
+  <div class="header-container">
     <img src="imagesToAdd/feedback-loop.png" alt="logoimage" class="logo">
     <h1 id="title">Student Experience Survey</h1>
-    <p id="description">Help us improve your learning experience</p>
-    <p>This survey is conducted to gather student feedback and preferences to improve academic and campus experiences."</p>
-    <form id="survey-form">
-      <label for="name" id="name-label">Name</label><br><br>
+  </div>
+
+  <p id="description">Help us improve your learning experience by filling out this short survey.</p>
+  
+  <form id="survey-form">
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="name" id="name-label">Name</label><br>
       <input type="text" id="name" placeholder="Enter your name" required><br><br>
-      <label for="email" id="email-label" >Email</label><br><br>
-      <input type="email" id="email" placeholder="enter your email" pattern="[a-zA-Z0-9.]+@[a-z-Z0-9.]+\.[a-zA-Z]{2,}$"
-      title="please enter in this form yourid@domain.prifix" required><br></br>
-      <label for="number" id="number-label">Number</label><br><br>
-      <input type="number" id="number" placeholder="number" min="1000000000" max="200"><br></br>
-      <label for="class" id="class">Class</label><br><br>
-      <select name="class"id="dropdown"  ><option>BSC</option><option>BCOM</option><option>BCA</option><option>BSW</option><option>BA</option><option>BBA</option></select><br></br>
+
+      <label for="email" id="email-label">Email</label><br>
+      <input type="email" id="email" placeholder="Enter your email" pattern="[a-zA-Z0-9.]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,}$" required><br><br>
+
+      <label for="number" id="number-label">Roll Number</label><br>
+      <input type="number" id="number" placeholder="Enter your RollNo" min="1000000000" max="9999999999"><br><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Academic Details</legend>
+
+      <label for="dropdown" id="class">Class</label><br>
+      <select name="class" id="dropdown">
+        <option>BSC</option>
+        <option>BCOM</option>
+        <option>BCA</option>
+        <option>BSW</option>
+        <option>BA</option>
+        <option>BBA</option>
+      </select><br><br>
+
+      <label id="year">Year</label><br>
+      <input type="radio" name="year" value="1"> 1st Year<br>
+      <input type="radio" name="year" value="2"> 2nd Year<br>
+      <input type="radio" name="year" value="3"> 3rd Year<br><br>
+
+      <label for="dropdown" id="section">Section</label><br>
+      <select name="section" id="dropdown">
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+      </select><br><br>
+
+    </fieldset>
+
+    <fieldset> 
+      <legend>Languages / Skills / Interests</legend>
+
+      <label id="lang">Languages</label><br>
+      <input type="checkbox" value="Eng"> English<br>
+      <input type="checkbox" value="Hindi"> Hindi<br>
+      <input type="checkbox" value="Kan"> Kannada<br><br>
+
+      <label id="lang">Skills </label><br>
+      <input type="checkbox" value="html"> HTML<br>
+      <input type="checkbox" value="css"> CSS<br>
+      <input type="checkbox" value="Python"> Python<br>
+      <input type="checkbox" value="sql"> SQL<br><br>
       
-     <label for="year" id="year">Year</label> <br><br><input type="radio" name="year" value="1">1st year</input><br><br>
-     <input type="radio" name="year" value="2">2nd year</input><br><br>
-     <input type="radio" name="year" value="2">3rd year</input><br></br>
+      <label id="Interests">Interests</label><br>
+      <input type="text" placeholder="E.g., Singing, NSS, Mime, etc.">
 
-<label for="l" id="Languages">Languages known :</label><br><br>
-<input type="checkbox" value="Eng">English</input> <br><br>
-<input type="checkbox" value="Hindi">Hindi</input> <br><br>
 
-<input type="checkbox" value="kan">Kannada</input> <br></br>
-<label for="c" id="c">Comment Line</label><br><br>
-<textarea name="address" placeholder="Write about you" id="C" ></textarea><br></br>
-<input type="submit"  id="submit">
+    </fieldset>
 
-<b>
-    </form>
-  </body>
+    <fieldset>
+        <legend>Feedback Section</legend>
+      
+        <label for="rating">How useful was your college experience?</label>
+        <select id="rating" name="rating" required>
+          <option value="" disabled selected>Select a rating</option>
+          <option value="1">1 - Not useful</option>
+          <option value="2">2</option>
+          <option value="3">3 - Average</option>
+          <option value="4">4</option>
+          <option value="5">5 - Very useful</option>
+        </select>
+      
+        <label for="suggestions">Suggestions or Feedback</label>
+        <textarea id="suggestions" name="suggestions" placeholder="Your feedback here..."></textarea>
+      </fieldset>
+      
+
+    
+
+    <footer>
+        <p>Contact us: <a href="mailto:admin@college.edu">admin@college.edu</a></p>
+        <p>
+          Follow us on:
+          <a href="https://facebook.com" target="_blank">Facebook</a> |
+          <a href="https://instagram.com" target="_blank">Instagram</a> |
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </p>
+        <p>Made  by Anyashree Somanath Majalikar</p>
+      </footer>
+      
+
+    <input type="submit" id="submit" value="Submit">
+  </form>
+</body>
 </html>
